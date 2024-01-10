@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Heading on Button Click</title>
+</head>
+<body>
+  <button id="addHeadingButton">Add Heading</button>
+  <div id="headingContainer"></div>
+
+  <script>
+    const button = document.getElementById("addHeadingButton");
+    const headingContainer = document.getElementById("headingContainer");
+    button.style.cursor="pointer"
+
+    button.addEventListener("click", function(){
+      const newHeading = document.createElement("h1");
+      newHeading.textContent = "MERN stack";
+      newHeading.style.color="blue"
+      headingContainer.insertBefore(newHeading, headingContainer.firstChild); // Insert above button
+    });
+  </script>
+</body>
+</html>

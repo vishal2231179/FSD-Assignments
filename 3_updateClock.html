@@ -1,0 +1,59 @@
+<!-- 
+  3. Write code to implement timer clock using JS -- display HH:MM:SS -- the time should
+keep updating every second (USING DOM). 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>current time</title>
+  <!-- styling -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    #clock {
+      font-size: 2em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div id="clock">00:00:00</div>
+
+
+
+
+
+
+<!-- js code -->
+<script>
+function updateClock() {
+  // Get the current time
+  const now = new Date();
+
+  // Extract hours, minutes, and seconds
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+
+  // Display the time in the format HH:MM:SS
+  const currentTime = `${hours}:${minutes}:${seconds}`; 
+
+  // Update the DOM intxt
+  document.getElementById('clock').textContent = currentTime;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+
+updateClock();
+</script>
+
+</body>
+</html>

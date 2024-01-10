@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+        // Function to find the sum of array elements
+        function findSum(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum;
+        }
+        // Get array input from the user
+        let inputArray = prompt("Enter elements of the array, separated by commas (e.g., 1,2,3):");
+        let array = inputArray.split(",").map(Number);
+
+        // Calculate the sum using the findSum function
+        let result = findSum(array);
+
+        // Display the result
+        prompt("Sum of the array elements: " + result);
+
+    </script>
+</body>
+
+</html>

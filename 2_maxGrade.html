@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade System</title>
+</head>
+<body>
+    <script>
+        function findGrades(marks) {
+  switch (true) {
+    case marks <= 10:
+      return "E";
+    case marks <= 20:
+      return "D";
+    case marks <= 30:
+      return "C";
+    case marks <= 40:
+      return "B";
+    case marks <= 50:
+      return "A";
+    default:
+      return "Invalid marks";
+  }
+}
+
+// Get marks from user
+const marks = prompt("Enter your marks out of 50: ");
+// Find and print the grade
+const grade = findGrades(marks);
+prompt("Your grade is:", grade);
+    </script>
+</body>
+</html>

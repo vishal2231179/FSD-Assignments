@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+    <style>
+         h1 {
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            background-color: rgb(248, 253, 125);
+        }
+        button{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(185, 226, 250);
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+    <H1>
+        "Hello, World!"
+    </H1>
+    <button>
+        Replace
+    </button>
+</center>
+
+    <script>
+        var a = document.querySelector("H1")
+        var b = document.querySelector("button")
+        hide=0
+        b.addEventListener("click",function(){
+            if(hide==0){
+                a.innerHTML="Welcome to PSITCHE!"
+                hide=1
+            }
+            else{
+                    a.innerHTML="Hello World"
+                    hide=0
+            }
+            
+        })
+    </script>
+    
+</body>
+</html>
